@@ -9,15 +9,15 @@ class PostSerializer(serializers.ModelSerializer):
     )
 
     class Meta:
+        model = Post
         fields = ('id', 'text', 'author', 'image',
                   'pub_date', 'image')
-        model = Post
 
 
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
-        fields = ('id', 'title', 'slug', 'description')
         model = Group
+        fields = ('id', 'title', 'slug', 'description')
 
 
 class CommentSerializer(serializers.ModelSerializer):
