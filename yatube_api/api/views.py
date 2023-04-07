@@ -1,6 +1,5 @@
 from django.shortcuts import get_object_or_404
 from rest_framework import viewsets, permissions
-from rest_framework.exceptions import PermissionDenied
 
 from posts.models import Post, Group
 from .permissions import AuthorOrReadOnly
